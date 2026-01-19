@@ -23,7 +23,7 @@ minecraft {
         }
     }
     if (project.hasProperty('common_aws_enabled') && project.findProperty('common_aws_enabled').toBoolean()) {
-        accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
+        accessTransformer = file('src/main/resources/META-INF/climbers.accesswidener')
     }
 }
 

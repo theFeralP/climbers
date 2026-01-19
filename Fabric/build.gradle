@@ -24,9 +24,8 @@ dependencies {
 }
 
 loom {
-    //accessWidenerPath = file("src/main/resources/META-INF/nyfsspiders.accesswidener")
-    accessWidenerPath = project(":Common")
-            .file("src/main/resources/${mod_id}.accesswidener")
+    accessWidenerPath = file("src/main/resources/META-INF/${mod_id}.accesswidener")
+    //accessWidenerPath = project(":Common").file("src/main/resources/${mod_id}.accesswidener")
 
     runs {
         client {
