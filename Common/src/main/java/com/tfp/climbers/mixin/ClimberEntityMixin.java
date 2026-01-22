@@ -193,22 +193,22 @@ public abstract class ClimberEntityMixin extends PathfinderMob implements IClimb
 
 	@Override
 	public void onWrite(CompoundTag nbt) {
-		nbt.putDouble("nyfsspiders.AttachmentNormalX", this.attachmentNormal.x);
-		nbt.putDouble("nyfsspiders.AttachmentNormalY", this.attachmentNormal.y);
-		nbt.putDouble("nyfsspiders.AttachmentNormalZ", this.attachmentNormal.z);
+		nbt.putDouble("climbers.AttachmentNormalX", this.attachmentNormal.x);
+		nbt.putDouble("climbers.AttachmentNormalY", this.attachmentNormal.y);
+		nbt.putDouble("climbers.AttachmentNormalZ", this.attachmentNormal.z);
 
-		nbt.putInt("nyfsspiders.AttachedTicks", this.attachedTicks);
+		nbt.putInt("climbers.AttachedTicks", this.attachedTicks);
 	}
 
 	@Override
 	public void onRead(CompoundTag nbt) {
 		this.prevAttachmentNormal = this.attachmentNormal = new Vec3(
-				nbt.getDouble("nyfsspiders.AttachmentNormalX"),
-				nbt.getDouble("nyfsspiders.AttachmentNormalY"),
-				nbt.getDouble("nyfsspiders.AttachmentNormalZ")
+				nbt.getDouble("climbers.AttachmentNormalX"),
+				nbt.getDouble("climbers.AttachmentNormalY"),
+				nbt.getDouble("climbers.AttachmentNormalZ")
 				);
 
-		this.attachedTicks = nbt.getInt("nyfsspiders.AttachedTicks");
+		this.attachedTicks = nbt.getInt("climbers.AttachedTicks");
 
 		this.orientation = this.calculateOrientation(1);
 	}
